@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portal</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+</head>
+<body>
+    <div class="sidebar">
+        <div class="top">
+            <div class="logo">
+                <i class='bx bxs-user-circle'></i>
+                <span>KJS Portal</span>
+            </div>
+            <i class='bx bx-menu' id="btn"></i>
+        </div>
+        <div class="user">
+            <img src="photos/Logo.jpg" alt="me" class="user-img">
+            <div>
+                <p class="bold">Welcome</p>
+                <p><?php echo $_POST["fname"]; ?></p>
+            </div>
+        </div>
+        <ul>
+            <li>
+                <a href="#">
+                    <i class='bx bxs-grid-alt'></i>
+                    <span class="nav-item">Dahboard</span>
+                </a>
+                <span class="tooltip">Dashboard</span>
+            </li>
+            <li class="dropdown">
+                <a href="#">
+                    <i class='bx bxs-graduation'></i>
+                    <span class="nav-item">Academics</span>
+                    <div class="dropdown-container">
+                        <a href="#">
+                            <i class='bx bxs-report'></i>
+                            <span class="nav-item">Results</span>
+                        </a>
+                    </div>
+                </a>
+                <span class="tooltip">Academics</span>
+            </li>
+            <li class="dropdown">
+                <a href="#">
+                    <i class='bx bx-download'></i>
+                    <span class="nav-item">Downloads</span>
+                    <div class="dropdown-container">
+                        <a href="#">
+                            <i class='bx bxs-credit-card'></i>
+                            <span class="nav-item">Fees</span>
+                        </a>
+                      </div>
+                </a>
+                <span class="tooltip">Downloads</span>
+            </li>
+            <li>
+                <a href="#">
+                    <i class='bx bx-wallet'></i>
+                    <span class="nav-item">Financials</span>
+                </a>
+                <span class="tooltip">Financials</span>
+            </li>
+            <li class="dropdown">
+                <a href="#">
+                    <i class='bx bx-cog'></i>
+                    <span class="nav-item">Settings</span>
+                    <div class="dropdown-container">
+                        <a href="#">
+                            <i class='bx bx-circle'></i>
+                            <span class="nav-item">Change Password</span>
+                        </a>
+                    </div>
+                </a>
+                <span class="tooltip">Settings</span>
+            </li>
+            <li>
+                <a href="#">
+                    <i class='bx bx-log-out'></i>
+                    <span class="nav-item">Logout</span>
+                </a>
+                <span class="tooltip">Logout</span>
+            </li>
+        </ul>
+    </div>
+    <div class="main-content">
+        <div class="container">
+            <h1>Dashboard</h1>
+        </div>
+    </div>
+</body>
+<script>
+    let btn = document.querySelector('#btn');
+    let sidebar = document.querySelector('.sidebar');
+
+    btn.onclick = function() {
+        sidebar.classList.toggle('active');
+    };
+</script>
+</html>
